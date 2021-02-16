@@ -25,7 +25,7 @@
 		"lodash.template": ">=4.5.0"
 	},
 	"scripts": {
-		"start": "./node_modules/.bin/gulp",
+		"start": "PORT=4000 react-scripts start",
 		"docs": "rm -rf docs && ./node_modules/.bin/gulp docs",
 		"push-docs": "rm -rf docs && gulp docs && git add docs/* && git commit -m \"Update docs\" && git push",
 		"deploy": "npm run push-docs"
