@@ -1,0 +1,33 @@
+<!--Secction share-->
+<fieldset class="share js-container collapsable__close">
+  <include
+    src="./titles.html"
+    classTitle="share__title js-title"
+    classTitleContainer="share__title--container"
+    classIcon="icon fas fa-share-alt"
+    section="Comparte"
+  ></include>
+
+  <!-- <div class="border"></div> -->
+
+  <div class="share__box collapsable__content collapsable__open">
+    <button
+      class="share__box--button js-create-btn"
+      type="submit"
+      title="Create card"
+    >
+      <i class="iconCard far fa-address-card"></i>
+      Crear tarjeta
+    </button>
+    <p class="js-required"></p>
+    <div class="share__box--subsection js-hidden js-display">
+      <h3 class="titleCard">La tarjeta ha sido creada:</h3>
+      <a class="linkCard js-card-result" href="" target="_blank"
+        >link awesome profile card</a
+      >
+      <a class="twitterLink" href="" target="_blank"
+        ><i class="icon fab fa-twitter"></i>Compartir en twitter</a
+      >
+    </div>
+  </div>
+</fieldset>
