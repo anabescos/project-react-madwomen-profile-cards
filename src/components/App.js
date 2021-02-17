@@ -1,21 +1,13 @@
 
 import '../stylesheets/App.scss';
-import logo from '../images/MadWomenLogo_2.svg';
+
 import adalabLogo from '../images/logo-adalab.png';
+import HeaderCard from './HeaderCard';
 function App() {
   return (
     <div className="App">
      
-     <header className="header">
-      <a href="./index.html">
-        <img
-          className="header__img"
-          src={logo}
-          title="Go to home page"
-          alt="Mad Women"
-        />
-      </a>
-    </header>
+     <HeaderCard />
 
     <main className="wrapper">
       <section className="generator">
