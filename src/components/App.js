@@ -4,6 +4,7 @@ import '../stylesheets/App.scss';
 import adalabLogo from '../images/logo-adalab.png';
 import HeaderCard from './HeaderCard';
 import GeneratorCard from './GeneratorCard';
+import Footer from './Footer';
 function App() {
   return (
     <div className="App">
@@ -196,21 +197,8 @@ function App() {
       </form>
 
     </main>
-    <footer className="footer">
-      <small className="footer__small"> Mad Women profile cards </small>
-      <a
-        className="footer__link"
-        title="Ir a la página de Adalab"
-        type="_blank"
-        href="https://adalab.es/"
-      >
-        <img
-          className="footer__logo"
-          src={adalabLogo}
-          alt="logo Adalab"
-        />
-      </a>
-    </footer>
+    <Footer />
+    
     </div>
   );
 }
