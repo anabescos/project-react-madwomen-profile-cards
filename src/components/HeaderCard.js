@@ -1,4 +1,3 @@
-
 import React from 'react';
 import logo from '../images/MadWomenLogo_2.svg';
 import "../stylesheets/layout/_headerCard.scss";
