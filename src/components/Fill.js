@@ -2,7 +2,7 @@ import React from 'react';
 import Titles from './Titles';
 
 class Fill extends React.Component {
-  render() {
+  render () {
     return (
       <fieldset className="fill js-container collapsable__close collapsable__open">
         <Titles name="Rellena" />

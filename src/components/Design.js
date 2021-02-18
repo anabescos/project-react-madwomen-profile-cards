@@ -3,7 +3,7 @@ import Titles from './Titles';
 import '../stylesheets/layout/form/_design.scss';
 
 class Design extends React.Component {
-  render() {
+  render () {
     return (
       <fieldset className="design js-container collapsable__close">
         <Titles name="Diseña" />

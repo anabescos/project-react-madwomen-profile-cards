@@ -2,7 +2,7 @@ import React from 'react';
 // import '../stylesheets/layout/_headerCard.scss';
 
 class Titles extends React.Component {
-  render() {
+  render () {
     return (
       <legend className="fill__title js-title">
         <div className="fill__title--container">

@@ -5,7 +5,7 @@ import HeaderCard from './HeaderCard';
 import Fill from './Fill';
 import Design from './Design';
 
-function App() {
+function App () {
   return (
     <div className="App">
       <HeaderCard />
