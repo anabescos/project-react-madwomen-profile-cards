@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from '../images/MadWomenLogo_2.svg';
-import "../stylesheets/layout/_headerCard.scss";
+import '../stylesheets/layout/_headerCard.scss';
 
 class HeaderCard extends React.Component {
-  render() {
+  render () {
     return (
-        <header className="header">
+      <header className="header">
         <a href="./index.html">
           <img
             className="header__img"
@@ -20,11 +20,3 @@ class HeaderCard extends React.Component {
 }
 
 export default HeaderCard;
-
-
-
-
-
-
-
-
