@@ -7,7 +7,7 @@ class Titles extends React.Component {
       <legend className="fill__title js-title">
         <div className="fill__title--container">
           {/* <i className="far fa-keyboard icon" /> */}
-          <i className="far fa-keyboard icon" />
+          <i className={this.props.icon+" icon"} />
           <h2 className="word">{this.props.name}</h2>
         </div>
         <i className="collapsable__icon fas fa-chevron-up arrow" />

@@ -6,7 +6,7 @@ class Fill extends React.Component {
     return (
       <fieldset className="fill js-container  collapsable__open">
         {/* collapsable__close */}
-        <Titles name="Rellena" />
+        <Titles name="Rellena" icon="far fa-keyboard"/>
         <div className="fill__box collapsable__content">
           <label className="fill__box--label name" for="Name">
             Nombre Completo

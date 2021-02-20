@@ -8,7 +8,7 @@ class Share extends React.Component {
     return (
       <fieldset className="share js-container ">
         {/* collapsable__close */}
-        <Titles name="Comparte" />
+        <Titles name="Comparte" icon="fas fa-share-alt"/>
 
         {/* <div className="border"></div>  */}
 

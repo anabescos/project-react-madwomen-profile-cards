@@ -26,7 +26,8 @@ class Design extends React.Component {
     return (
       <fieldset className="design js-container ">
         {/*collapsable__close */}
-        <Titles name="Diseña" />
+        
+        <Titles name="Diseña" icon="far fa-object-ungroup" />
         <div className="design__palette collapsable__content">
           <h3 className="design__palette--colors">Colores</h3>
           <div>
