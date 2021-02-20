@@ -1,11 +1,10 @@
 import '../stylesheets/App.scss';
-
-// import adalabLogo from '../images/logo-adalab.png';
 import HeaderCard from './HeaderCard';
 import GeneratorCard from './GeneratorCard';
 import Share from './Share';
 import Fill from './Fill';
 import Design from './Design';
+import Footer from './Footer';
 
 function App () {
   return (
@@ -19,7 +18,8 @@ function App () {
           <Share />
         </form>
       </main>
-      {/* <Footer  /> */}
+      <Footer />
+    
     </div>
   );
 }
