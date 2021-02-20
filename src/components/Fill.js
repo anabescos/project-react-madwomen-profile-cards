@@ -1,10 +1,11 @@
-import React from 'react';
-import Titles from './Titles';
+import React from "react";
+import Titles from "./Titles";
 
 class Fill extends React.Component {
-  render () {
+  render() {
     return (
-      <fieldset className="fill js-container collapsable__close collapsable__open">
+      <fieldset className="fill js-container  collapsable__open">
+        {/* collapsable__close */}
         <Titles name="Rellena" />
         <div className="fill__box collapsable__content">
           <label className="fill__box--label name" for="Name">
