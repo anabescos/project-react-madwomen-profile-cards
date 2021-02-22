@@ -1,3 +1,7 @@
+@import '../core/_variables.scss';
+@import '../core/_reset.scss';
+@import '../core/_mixins.scss';
+
 .page__header {
   display: flex;
   justify-content: space-evenly;

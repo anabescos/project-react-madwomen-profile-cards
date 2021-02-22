@@ -1,18 +1,12 @@
 import React from "react";
-import Titles from "./Titles";
+
 
 import "../stylesheets/layout/form/_share.scss";
 
 class Share extends React.Component {
   render() {
     return (
-      <fieldset className="share js-container ">
-        {/* collapsable__close */}
-        <Titles name="Comparte" icon="fas fa-share-alt"/>
-
-        {/* <div className="border"></div>  */}
-
-        <div className="share__box collapsable__content collapsable__open">
+      <div className="share__box collapsable__content collapsable__open">
           <button
             className="share__box--button js-create-btn"
             type="submit"
@@ -32,7 +26,6 @@ class Share extends React.Component {
             </a>
           </div>
         </div>
-      </fieldset>
     );
   }
 }

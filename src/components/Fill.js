@@ -1,13 +1,11 @@
 import React from "react";
-import Titles from "./Titles";
+import "../stylesheets/layout/form/_fill.scss";
 
 class Fill extends React.Component {
   render() {
     return (
-      <fieldset className="fill js-container  collapsable__open">
-        {/* collapsable__close */}
-        <Titles name="Rellena" icon="far fa-keyboard"/>
-        <div className="fill__box collapsable__content">
+      
+        <div className="fill__box">
           <label className="fill__box--label name" for="Name">
             Nombre Completo
           </label>
@@ -94,7 +92,6 @@ class Fill extends React.Component {
             name="github"
           />
         </div>
-      </fieldset>
     );
   }
 }

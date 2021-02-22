@@ -1,5 +1,4 @@
 import React from "react";
-import Titles from "./Titles";
 import Palette from "./Palette";
 
 import "../stylesheets/layout/form/_design.scss";
@@ -24,11 +23,7 @@ class Design extends React.Component {
 
   render() {
     return (
-      <fieldset className="design js-container ">
-        {/*collapsable__close */}
-        
-        <Titles name="Diseña" icon="far fa-object-ungroup" />
-        <div className="design__palette collapsable__content">
+      <> 
           <h3 className="design__palette--colors">Colores</h3>
           <div>
             <Palette>
@@ -72,8 +67,8 @@ class Design extends React.Component {
               />
             </Palette>
           </div>
-        </div>
-      </fieldset>
+        
+      </>
     );
   }
 }
