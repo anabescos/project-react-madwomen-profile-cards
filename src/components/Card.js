@@ -1,4 +1,5 @@
 import React from "react";
+import IconLinks from "./IconLinks";
 
 class Card extends React.Component {
   render() {
@@ -15,26 +16,10 @@ class Card extends React.Component {
         <div className="js__profile-image container__img"></div>
         <nav className="container__nav">
           <ul className="menu">
-            <li className="menu__item">
-              <a className="js-card-phone" href="">
-                <i className="menu__item--icon fas fa-mobile-alt"></i>
-              </a>
-            </li>
-            <li className="menu__item">
-              <a className="js-card-email" href="">
-                <i className="menu__item--icon far fa-envelope"></i>
-              </a>
-            </li>
-            <li className="menu__item">
-              <a className="js-card-linkedin" href="" target="_blank">
-                <i className="menu__item--icon fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li className="menu__item">
-              <a className="js-card-github" href="" target="_blank">
-                <i className="menu__item--icon fab fa-github-alt"></i>
-              </a>
-            </li>
+            <IconLinks aClassName="phone" iClassName="fas fa-mobile-alt" />
+            <IconLinks aClassName="email" iClassName="far fa-envelope" />
+            <IconLinks aClassName="linkedin" iClassName="fab fa-linkedin-in" />
+            <IconLinks aClassName="github" iClassName="fab fa-github-alt" />
           </ul>
         </nav>
       </div>

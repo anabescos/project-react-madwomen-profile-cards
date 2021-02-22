@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 // import '../stylesheets/layout/_headerCard.scss';
 
 class Titles extends React.Component {
-  render () {
+  render() {
     return (
-      <legend className="fill__title js-title">
-        <div className="fill__title--container">
+      <legend className={`${this.props.className}__title js-title`}>
+        <div className={`${this.props.className}__title--container`}>
           {/* <i className="far fa-keyboard icon" /> */}
-          <i className={this.props.icon+" icon"} />
+          <i className={this.props.icon + " icon"} />
           <h2 className="word">{this.props.name}</h2>
         </div>
         <i className="collapsable__icon fas fa-chevron-up arrow" />
