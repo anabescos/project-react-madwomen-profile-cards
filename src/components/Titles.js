@@ -3,8 +3,10 @@ import React from "react";
 
 class Titles extends React.Component {
   render() {
+    console.log(this.props);
     return (
-      <legend className={`${this.props.className}__title js-title`}>
+      <legend className={`${this.props.className}__title js-title`} 
+      onClick={this.props.clickEvent}>
         <div className={`${this.props.className}__title--container`}>
           {/* <i className="far fa-keyboard icon" /> */}
           <i className={this.props.icon + " icon"} />

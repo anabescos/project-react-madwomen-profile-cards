@@ -5,7 +5,7 @@ class Fill extends React.Component {
   render() {
     return (
       <div className="fill__box collapsable__content">
-        <label className="fill__box--label name" for="Name">
+        <label className="fill__box--label name" htmlFor="Name">
           Nombre Completo
         </label>
         <input
@@ -16,7 +16,7 @@ class Fill extends React.Component {
           name="name"
           required
         />
-        <label className="fill__box--label" for="job">
+        <label className="fill__box--label" htmlFor="job">
           Puesto
         </label>
         <input
@@ -27,7 +27,7 @@ class Fill extends React.Component {
           name="job"
           required
         />
-        <label className="fill__box--label imgLabel" for="photo">
+        <label className="fill__box--label imgLabel" htmlFor="photo">
           Imagen de perfil
         </label>
         <div className="addImage">
@@ -46,7 +46,7 @@ class Fill extends React.Component {
           />
           <div className="js__profile-preview preview" />
         </div>
-        <label className="fill__box--label" for="email">
+        <label className="fill__box--label" htmlFor="email">
           Email
         </label>
         <input
@@ -58,7 +58,7 @@ class Fill extends React.Component {
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           required
         />
-        <label className="fill__box--label" for="phone">
+        <label className="fill__box--label" htmlFor="phone">
           Teléfono
         </label>
         <input
@@ -70,7 +70,7 @@ class Fill extends React.Component {
           pattern="^[0-9]{9}$"
           required
         />
-        <label className="fill__box--label" for="linkedin">
+        <label className="fill__box--label" htmlFor="linkedin">
           Linkedin
         </label>
         <input
@@ -80,7 +80,7 @@ class Fill extends React.Component {
           id="linkedin"
           name="linkedin"
         />
-        <label className="fill__box--label" for="github">
+        <label className="fill__box--label" htmlFor="github">
           Github
         </label>
         <input

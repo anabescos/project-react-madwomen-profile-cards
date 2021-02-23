@@ -16,7 +16,7 @@ class Palette extends React.Component {
       );
     });
     return (
-      <label className="design__palette--input" for="">
+      <label className="design__palette--input" htmlFor="">
         {this.props.children}
         <ul className="design__palette--list ">{paintList}</ul>
         {/*design__palette1 debe ir en el primer ul*/}

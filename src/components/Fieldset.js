@@ -10,7 +10,7 @@ class Fieldset extends React.Component {
   }
   handleClick() {
     this.setState({ isOpen: !this.state.isOpen });
-    console.log("Me han clickado");
+    console.log('Holi');
   }
   render() {
     const openClassName = this.state.isOpen
@@ -19,12 +19,11 @@ class Fieldset extends React.Component {
     return (
       <fieldset
         className={`js-container ${openClassName} ${this.props.className}`}
-        onClick={this.handleClick}
       >
         <Titles
           className={this.props.className}
           name={this.props.name}
-          icon={this.props.icon}
+          icon={this.props.icon} clickEvent={this.handleClick}
         />
         <div className={"collapsable__content "}>{this.props.children}</div>
       </fieldset>
