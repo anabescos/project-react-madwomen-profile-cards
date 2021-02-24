@@ -1,5 +1,5 @@
 import React from "react";
-import Palette from "./Palette";
+import Palettes from "./Palettes";
 
 import "../stylesheets/layout/form/_design.scss";
 
@@ -14,60 +14,23 @@ class Design extends React.Component {
     const checkedRadio = ev.target.value;
     if (checkedRadio) {
       isChecked = "checked";
+      console.log("me han clicado");
     } else {
       isChecked = "";
     }
-    console.log(isChecked);
-    this.forceUpdate();
+    // this.forceUpdate();
   }
 
   render() {
     return (
-      <> 
-          <h3 className="design__palette--colors">Colores</h3>
-          <div>
-            <Palette>
-              <input
-                className="js-palette design__palette1"
-                type="radio"
-                name="palette"
-                value="1"
-                checked={isChecked}
-                onChange={this.onChangeRadio}
-              />
-            </Palette>
-            <Palette>
-              <input
-                className="js-palette"
-                type="radio"
-                name="palette"
-                value="2"
-                checked={isChecked}
-                onChange={this.onChangeRadio}
-              />
-            </Palette>
-            <Palette>
-              <input
-                className="js-palette"
-                type="radio"
-                name="palette"
-                value="3"
-                checked={isChecked}
-                onChange={this.onChangeRadio}
-              />
-            </Palette>
-            <Palette>
-              <input
-                className="js-palette"
-                type="radio"
-                name="palette"
-                value="4"
-                checked={isChecked}
-                onChange={this.onChangeRadio}
-              />
-            </Palette>
-          </div>
-        
+      <>
+        <h3 className="design__palette--colors">Colores</h3>
+        <div>
+          <Palettes value="1" />
+          <Palettes value="2" />
+          <Palettes value="3" />
+          <Palettes value="4" />
+        </div>
       </>
     );
   }
