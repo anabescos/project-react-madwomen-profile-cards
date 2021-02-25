@@ -2,6 +2,29 @@ import React from "react";
 import "../stylesheets/layout/form/_fill.scss";
 
 class Fill extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      name : 'Peggy Olson',
+      job: 'Copywriter',
+      email: 'mailto:#',
+      phone: '',
+      linkedin: '#',
+      github: '#'
+    };
+   this.handleChange= this.handleChange.bind(this);
+  }
+  handleChange= (ev)=>{
+
+    const key = ev.target.name;
+    const newState = {
+      [key]: ev.target.value
+    };
+    this.setState(newState);
+
+  }
+  
   render() {
     return (
       <div className="fill__box collapsable__content">
@@ -9,6 +32,8 @@ class Fill extends React.Component {
           Nombre Completo
         </label>
         <input
+          value ={this.state.name}
+          onChange={this.handleChange}
           className="fill__box--input js-input-name js-input-text"
           placeholder="Ej: Sally Jill"
           type="text"
@@ -20,6 +45,8 @@ class Fill extends React.Component {
           Puesto
         </label>
         <input
+          value ={this.state.job}
+          onChange={this.handleChange}
           className="fill__box--input job js-input-job js-input-text"
           placeholder="Ej: Front-end unicorn"
           type="text"
@@ -38,6 +65,8 @@ class Fill extends React.Component {
             Añadir imagen
           </button>
           <input
+            // value ={this.state.name}
+            // onChange={this.handleChange}
             className="js__profile-upload-btn buttonInput"
             type="file"
             id="photo"
@@ -50,6 +79,8 @@ class Fill extends React.Component {
           Email
         </label>
         <input
+          value ={this.state.email}
+          onChange={this.handleChange}
           className="fill__box--input js-input-email js-input-text"
           placeholder="Ej: sally-hill@gmail.com"
           type="email"
@@ -62,6 +93,8 @@ class Fill extends React.Component {
           Teléfono
         </label>
         <input
+          value ={this.state.phone}
+          onChange={this.handleChange}
           className="fill__box--input js-input-phone js-input-text"
           placeholder="Ej:+34 666666666"
           type="tel"
@@ -74,6 +107,8 @@ class Fill extends React.Component {
           Linkedin
         </label>
         <input
+          value ={this.state.linkedin}
+          onChange={this.handleChange}
           className="fill__box--input js-input-linkedin js-input-text"
           placeholder="Ej: linkedin.com/in/sally.hill"
           type="text"
@@ -84,6 +119,8 @@ class Fill extends React.Component {
           Github
         </label>
         <input
+          value ={this.state.github}
+          onChange={this.handleChange}
           className="fill__box--input js-input-github js-input-text"
           placeholder="Ej: @sally-hill"
           type="text"
