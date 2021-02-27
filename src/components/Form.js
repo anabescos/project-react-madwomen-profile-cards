@@ -4,7 +4,7 @@ import Fill from "./Fill";
 import Share from "./Share";
 
 function Form(props) {
-  
+  // console.log("Form props", props);
 
   return (
     <form className="form js-submit" action="create card" method="GET">
@@ -12,7 +12,7 @@ function Form(props) {
         <Design />
       </Fieldset>
       <Fieldset name="Rellena" icon="far fa-keyboard" className="fill">
-        <Fill  name ={props.name} job ={props.job} onChange = {props.handleText} />
+        <Fill input={props.input} eventHandler={props.eventHandler} />
       </Fieldset>
       <Fieldset name="Comparte" icon="fas fa-share-alt" className="share">
         <Share />
