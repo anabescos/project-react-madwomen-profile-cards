@@ -10,7 +10,7 @@ class Fieldset extends React.Component {
   }
   handleClick() {
     this.setState({ isOpen: !this.state.isOpen });
-    console.log('Holi');
+    
   }
   render() {
     const openClassName = this.state.isOpen
