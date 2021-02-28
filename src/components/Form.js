@@ -12,7 +12,16 @@ function Form(props) {
         <Design />
       </Fieldset>
       <Fieldset name="Rellena" icon="far fa-keyboard" className="fill">
-        <Fill data={props.data} handleInput={props.handleInput} />
+        <Fill
+          // data={props.data}
+          name={props.name}
+          job={props.job}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+          mail={props.mail}
+          handleInput={props.handleInput}
+        />
       </Fieldset>
       <Fieldset name="Comparte" icon="fas fa-share-alt" className="share">
         <Share />

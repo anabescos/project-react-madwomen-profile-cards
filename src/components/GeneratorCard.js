@@ -23,29 +23,46 @@ class GeneratorCard extends React.Component {
     this.setState({ [inputKey]: inputValue });
   }
 
-  handleReset(){
-    this.setState ({
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: '',
+  handleReset() {
+    this.setState({
+      name: "",
+      job: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
     });
   }
-
-  
 
   render() {
     return (
       <>
         <section className="generator">
           <article className="generator__article">
-            <Reset handleReset={this.handleReset}/>
-            <Card data={this.state} handleInput={this.handleInput} />
+            <Reset handleReset={this.handleReset} />
+            <Card
+              name={this.state.name}
+              job={this.state.job}
+              photo={this.state.photo}
+              phone={this.state.phone}
+              linkedin={this.state.linkedin}
+              github={this.state.github}
+              mail={this.state.mail}
+              // data={this.state}
+              handleInput={this.handleInput}
+            />
           </article>
         </section>
-        <Form data={this.state} handleInput={this.handleInput} />
+        <Form
+          // data={this.state}
+          handleInput={this.handleInput}
+          name={this.state.name}
+          job={this.state.job}
+          phone={this.state.phone}
+          linkedin={this.state.linkedin}
+          github={this.state.github}
+          mail={this.state.mail}
+        />
       </>
     );
   }

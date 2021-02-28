@@ -8,10 +8,10 @@ class Card extends React.Component {
       <div className="generator__article--container js-card">
         <div className="container__nameprofession">
           <h2 className="container__nameprofession--name js-card-name">
-            {this.props.data.name || "Peggy Olson"}
+            {this.props.name || "Peggy Olson"}
           </h2>
           <h3 className="container__nameprofession--profession js-card-job">
-            {this.props.data.job || "Copywriter"}
+            {this.props.job || "Copywriter"}
           </h3>
         </div>
 
@@ -19,22 +19,22 @@ class Card extends React.Component {
         <nav className="container__nav">
           <ul className="menu">
             <IconLinks
-              href={this.props.data.phone}
+              href={this.props.phone}
               aClassName="phone"
               iClassName="fas fa-mobile-alt"
             />
             <IconLinks
-              href={this.props.data.email}
+              href={`mailto:${this.props.email}`}
               aClassName="email"
               iClassName="far fa-envelope"
             />
             <IconLinks
-              href={this.props.data.linkedin}
+              href={`https://www.linkedin.com/in/${this.props.linkedin}`}
               aClassName="linkedin"
               iClassName="fab fa-linkedin-in"
             />
             <IconLinks
-              href={this.props.data.github}
+              href={`https://www.github.com/${this.props.github}`}
               aClassName="github"
               iClassName="fab fa-github-alt"
             />

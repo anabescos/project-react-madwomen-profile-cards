@@ -16,6 +16,7 @@ class Fill extends React.Component {
     return (
       <div className="fill__box collapsable__content">
         <Input
+          value={this.props.name}
           htmlFor="Name"
           setName="Nombre Completo"
           onChange={this.getChangeInput}
@@ -27,6 +28,7 @@ class Fill extends React.Component {
           required
         />
         <Input
+          value={this.props.job}
           htmlFor="job"
           setName="Puesto"
           onChange={this.getChangeInput}
@@ -57,6 +59,7 @@ class Fill extends React.Component {
           <div className="js__profile-preview preview" />
         </div>
         <Input
+          value={this.props.email}
           htmlFor="email"
           setName="Email"
           onChange={this.getChangeInput}
@@ -69,6 +72,7 @@ class Fill extends React.Component {
           required
         />
         <Input
+          value={this.props.phone}
           htmlFor="phone"
           setName="Teléfono"
           onChange={this.getChangeInput}
@@ -81,6 +85,7 @@ class Fill extends React.Component {
           required
         />
         <Input
+          value={this.props.linkedin}
           htmlFor="linkedin"
           setName="Linkedin"
           onChange={this.getChangeInput}
@@ -91,6 +96,7 @@ class Fill extends React.Component {
           name="linkedin"
         />
         <Input
+          value={this.props.github}
           htmlFor="github"
           setName="Github"
           onChange={this.getChangeInput}
