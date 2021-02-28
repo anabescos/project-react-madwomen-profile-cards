@@ -1,13 +1,14 @@
 import React from "react";
 import IconLinks from "./IconLinks";
-import Fill from "./Fill";
+// import Fill from "./Fill";
 
 function Card(props) {
+   console.log ("Esto son las props", props);
   return (
     <div className="generator__article--container js-card">
       <div className="container__nameprofession">
         <h2 className="container__nameprofession--name js-card-name">
-          Nombre Apellido
+           {props.input.name || 'Nombre y Apellidos'}
         </h2>
         <h3 className="container__nameprofession--profession js-card-job">
           Copywriter

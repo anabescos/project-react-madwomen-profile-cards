@@ -16,7 +16,7 @@ const GeneratorCard = () => {
       <section className="generator">
         <article className="generator__article">
           <Reset />
-          <Card />
+          <Card input={input} />
         </article>
       </section>
       <Form input={input} eventHandler={handleInput} />
