@@ -12,7 +12,7 @@ function Form(props) {
         <Design />
       </Fieldset>
       <Fieldset name="Rellena" icon="far fa-keyboard" className="fill">
-        <Fill input={props.input} eventHandler={props.eventHandler} />
+        <Fill data={props.data} handleInput={props.handleInput} />
       </Fieldset>
       <Fieldset name="Comparte" icon="fas fa-share-alt" className="share">
         <Share />
