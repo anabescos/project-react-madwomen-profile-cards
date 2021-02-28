@@ -3,15 +3,15 @@ import IconLinks from "./IconLinks";
 // import Fill from "./Fill";
 
 function Card(props) {
-   console.log ("Esto son las props", props);
+  //  console.log ("Esto son las props", props);
   return (
     <div className="generator__article--container js-card">
       <div className="container__nameprofession">
         <h2 className="container__nameprofession--name js-card-name">
-           {props.input.name || 'Nombre y Apellidos'}
+           {props.input.name || 'Sally Jill'}
         </h2>
         <h3 className="container__nameprofession--profession js-card-job">
-          Copywriter
+        {props.input.job || 'Copywriter'}
         </h3>
       </div>
 
