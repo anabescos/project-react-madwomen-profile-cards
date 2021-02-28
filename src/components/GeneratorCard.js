@@ -18,9 +18,9 @@ class GeneratorCard extends React.Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
-  handleInput = (inputKey, inputValue) => {
-    this.setInput({ [inputKey]: inputValue });
-  };
+  handleInput(inputKey, inputValue) {
+    this.setState({ [inputKey]: inputValue });
+  }
   render() {
     return (
       <>

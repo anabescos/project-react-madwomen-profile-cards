@@ -1,36 +1,23 @@
 import React from "react";
 class Input extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleInput = this.handleInput.bind(this);
-      }
-      handleInput(ev) {
-        this.props.handleInput({
-          inputName: ev.currentTarget.name,
-          inputValue: ev.currentTarget.value,
-        });
-      }
-    render(){
-     return (
-        <>
-          <label className="fill__box--label name" htmlFor="Name">
-          Nombre Completo
-          </label>
-          <input
-          value={this.props.name}
-          onChange={this.handleInput}
+  render() {
+    return (
+      <>
+        <label className="fill__box--label name" htmlFor={this.props.htmlFor}>
+          {this.props.setName}
+        </label>
+        <input
+          value={this.props.value}
+          onChange={this.props.onChange}
           className="fill__box--input js-input-name js-input-text"
-          placeholder="Ej: Sally Jill"
+          placeholder={this.props.placeholder}
           type="text"
-          id="name"
-          name="name"
-          required
-          />
-        < />
-     )
-
-
-
-    }
+          id={this.props.id}
+          name={this.props.name}
+          required //mirar a ver cómo se hacía esto :)
+        />
+      </>
+    );
+  }
 }
 export default Input;

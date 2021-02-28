@@ -1,43 +1,39 @@
 import React from "react";
+import Input from "./Input";
 import "../stylesheets/layout/form/_fill.scss";
 
 class Fill extends React.Component {
   constructor(props) {
     super(props);
+    this.getChangeInput = this.getChangeInput.bind(this);
   }
 
+  getChangeInput(ev) {
+    this.props.handleInput(ev.currentTarget.name, ev.currentTarget.value);
+    console.log("fill:", ev.currentTarget.name, ev.currentTarget.value);
+  }
   render() {
-    const {
-      props,
-    } = this;
-
-    const getChangeInput = (ev) => {
-      props.eventHandler(ev.currentTarget.name, ev.currentTarget.value);
-      console.log("fill:", ev.currentTarget.value);
-    };
-
     return (
       <div className="fill__box collapsable__content">
-        < Input value= />
-        {/* <label className="fill__box--label name" htmlFor="Name">
-          Nombre Completo
-        </label>
-        <input
-          value={props.name}
-          onChange={getChangeInput}
+        <Input
+          htmlFor="Name"
+          setName="Nombre Completo"
+          // value={this.state.name}
+          onChange={this.getChangeInput}
           className="fill__box--input js-input-name js-input-text"
           placeholder="Ej: Sally Jill"
           type="text"
           id="name"
           name="name"
           required
-        /> */}
+        />
+
         <label className="fill__box--label" htmlFor="job">
           Puesto
         </label>
         <input
-          value={props.name}
-          onChange={getChangeInput}
+          // value={this.state.name}
+          onChange={this.getChangeInput}
           className="fill__box--input job js-input-job js-input-text"
           placeholder="Ej: Front-end unicorn"
           type="text"
