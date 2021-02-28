@@ -10,7 +10,7 @@ class Fill extends React.Component {
 
   getChangeInput(ev) {
     this.props.handleInput(ev.currentTarget.name, ev.currentTarget.value);
-    console.log("fill:", ev.currentTarget.name, ev.currentTarget.value);
+    // console.log("fill:", ev.currentTarget.name, ev.currentTarget.value);
   }
   render() {
     return (
@@ -18,24 +18,20 @@ class Fill extends React.Component {
         <Input
           htmlFor="Name"
           setName="Nombre Completo"
-          // value={this.state.name}
           onChange={this.getChangeInput}
-          className="fill__box--input js-input-name js-input-text"
-          placeholder="Ej: Sally Jill"
+          className="name"
+          placeholder="Ej: Peggy Olson"
           type="text"
           id="name"
           name="name"
           required
         />
-
-        <label className="fill__box--label" htmlFor="job">
-          Puesto
-        </label>
-        <input
-          // value={this.state.name}
+        <Input
+          htmlFor="job"
+          setName="Puesto"
           onChange={this.getChangeInput}
-          className="fill__box--input job js-input-job js-input-text"
-          placeholder="Ej: Front-end unicorn"
+          className="job"
+          placeholder="Ej: Copywriter"
           type="text"
           id="job"
           name="job"
@@ -60,13 +56,11 @@ class Fill extends React.Component {
           />
           <div className="js__profile-preview preview" />
         </div>
-        <label className="fill__box--label" htmlFor="email">
-          Email
-        </label>
-        <input
-          // value={props.email}
-          // onChange={props.getInput}
-          className="fill__box--input js-input-email js-input-text"
+        <Input
+          htmlFor="email"
+          setName="Email"
+          onChange={this.getChangeInput}
+          className="email"
           placeholder="Ej: sally-hill@gmail.com"
           type="email"
           id="email"
@@ -74,13 +68,11 @@ class Fill extends React.Component {
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           required
         />
-        <label className="fill__box--label" htmlFor="phone">
-          Teléfono
-        </label>
-        <input
-          // value={props.phone}
-          // onChange={props.getInput}
-          className="fill__box--input js-input-phone js-input-text"
+        <Input
+          htmlFor="phone"
+          setName="Teléfono"
+          onChange={this.getChangeInput}
+          className="phone"
           placeholder="Ej:+34 666666666"
           type="tel"
           id="phone"
@@ -88,25 +80,21 @@ class Fill extends React.Component {
           pattern="^[0-9]{9}$"
           required
         />
-        <label className="fill__box--label" htmlFor="linkedin">
-          Linkedin
-        </label>
-        <input
-          // value={props.linkedin}
-          // onChange={props.getInput}
-          className="fill__box--input js-input-linkedin js-input-text"
+        <Input
+          htmlFor="linkedin"
+          setName="Linkedin"
+          onChange={this.getChangeInput}
+          className="linkedin"
           placeholder="Ej: linkedin.com/in/sally.hill"
           type="text"
           id="linkedin"
           name="linkedin"
         />
-        <label className="fill__box--label" htmlFor="github">
-          Github
-        </label>
-        <input
-          // value={props.github}
-          // onChange={props.getInput}
-          className="fill__box--input js-input-github js-input-text"
+        <Input
+          htmlFor="github"
+          setName="Github"
+          onChange={this.getChangeInput}
+          className="github"
           placeholder="Ej: @sally-hill"
           type="text"
           id="github"

@@ -3,7 +3,7 @@ import IconLinks from "./IconLinks";
 
 class Card extends React.Component {
   render() {
-    // console.log("Esto son las props de card", this.props);
+    console.log("Esto son las props de card", this.props);
     return (
       <div className="generator__article--container js-card">
         <div className="container__nameprofession">
@@ -18,10 +18,26 @@ class Card extends React.Component {
         <div className="js__profile-image container__img"></div>
         <nav className="container__nav">
           <ul className="menu">
-            <IconLinks aClassName="phone" iClassName="fas fa-mobile-alt" />
-            <IconLinks aClassName="email" iClassName="far fa-envelope" />
-            <IconLinks aClassName="linkedin" iClassName="fab fa-linkedin-in" />
-            <IconLinks aClassName="github" iClassName="fab fa-github-alt" />
+            <IconLinks
+              href={this.props.data.phone}
+              aClassName="phone"
+              iClassName="fas fa-mobile-alt"
+            />
+            <IconLinks
+              href={this.props.data.email}
+              aClassName="email"
+              iClassName="far fa-envelope"
+            />
+            <IconLinks
+              href={this.props.data.linkedin}
+              aClassName="linkedin"
+              iClassName="fab fa-linkedin-in"
+            />
+            <IconLinks
+              href={this.props.data.github}
+              aClassName="github"
+              iClassName="fab fa-github-alt"
+            />
           </ul>
         </nav>
       </div>
