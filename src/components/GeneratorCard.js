@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import HeaderCard from "./HeaderCard";
 import Reset from "./Reset";
 import Card from "./Card";
 import Form from "./Form";
@@ -37,6 +38,7 @@ class GeneratorCard extends React.Component {
   render() {
     return (
       <>
+      <HeaderCard />
         <section className="generator">
           <article className="generator__article">
             <Reset handleReset={this.handleReset} />
