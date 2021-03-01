@@ -19,7 +19,7 @@ function Form(props) {
           phone={props.phone}
           linkedin={props.linkedin}
           github={props.github}
-          mail={props.mail}
+          email={props.email}
           handleInput={props.handleInput}
         />
       </Fieldset>
