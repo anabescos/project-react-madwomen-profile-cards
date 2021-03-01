@@ -40,35 +40,37 @@ class GeneratorCard extends React.Component {
   render() {
     return (
       <>
-      <HeaderCard />
-        <section className="generator">
-          <article className="generator__article">
-            <Reset handleReset={this.handleReset} />
-            <Card
-              palette={this.state.palette}
-              name={this.state.name}
-              job={this.state.job}
-              photo={this.state.photo}
-              phone={this.state.phone}
-              linkedin={this.state.linkedin}
-              github={this.state.github}
-              email={this.state.email}
-              // data={this.state}
-              handleInput={this.handleInput}
-            />
-          </article>
-        </section>
-        <Form
-          // data={this.state}
-          palette={this.state.palette}
-          handleInput={this.handleInput}
-          name={this.state.name}
-          job={this.state.job}
-          phone={this.state.phone}
-          linkedin={this.state.linkedin}
-          github={this.state.github}
-          mail={this.state.mail}
-        />
+        <HeaderCard />
+        <main className="wrapper">
+          <section className="generator">
+            <article className="generator__article">
+              <Reset handleReset={this.handleReset} />
+              <Card
+                palette={this.state.palette}
+                name={this.state.name}
+                job={this.state.job}
+                photo={this.state.photo}
+                phone={this.state.phone}
+                linkedin={this.state.linkedin}
+                github={this.state.github}
+                email={this.state.email}
+                // data={this.state}
+                handleInput={this.handleInput}
+              />
+            </article>
+          </section>
+          <Form
+            // data={this.state}
+            palette={this.state.palette}
+            handleInput={this.handleInput}
+            name={this.state.name}
+            job={this.state.job}
+            phone={this.state.phone}
+            linkedin={this.state.linkedin}
+            github={this.state.github}
+            mail={this.state.mail}
+          />
+        </main>
       </>
     );
   }
