@@ -1,18 +1,22 @@
 import "../stylesheets/App.scss";
-import HeaderCard from "./HeaderCard";
+import { Route, Switch } from "react-router-dom";
+import Landing from "./Landing";
 import GeneratorCard from "./GeneratorCard";
 
 import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <HeaderCard />
-      <main className="wrapper">
-        <GeneratorCard />
-      </main>
-      <Footer />
-    </div>
+    <body class="landing">
+      <div className="page">
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/GeneratorCard" component={GeneratorCard} />
+        </Switch>
+
+        <Footer />
+      </div>
+    </body>
   );
 }
 
