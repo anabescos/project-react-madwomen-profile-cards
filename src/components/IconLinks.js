@@ -2,7 +2,7 @@ import React from "react";
 
 class IconLinks extends React.Component {
   render() {
-    console.log("iconlinks:", this.props);
+    // console.log("iconlinks:", this.props);
     return (
       <li className="menu__item">
         <a

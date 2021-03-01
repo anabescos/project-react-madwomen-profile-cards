@@ -9,6 +9,7 @@ class GeneratorCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      palette: "1",
       name: "",
       job: "",
       email: "",
@@ -26,6 +27,7 @@ class GeneratorCard extends React.Component {
 
   handleReset() {
     this.setState({
+      palette: "1",
       name: "",
       job: "",
       email: "",
@@ -43,6 +45,7 @@ class GeneratorCard extends React.Component {
           <article className="generator__article">
             <Reset handleReset={this.handleReset} />
             <Card
+              palette={this.state.palette}
               name={this.state.name}
               job={this.state.job}
               photo={this.state.photo}
@@ -57,6 +60,7 @@ class GeneratorCard extends React.Component {
         </section>
         <Form
           // data={this.state}
+          palette={this.state.palette}
           handleInput={this.handleInput}
           name={this.state.name}
           job={this.state.job}
