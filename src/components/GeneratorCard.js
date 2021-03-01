@@ -66,7 +66,7 @@ class GeneratorCard extends React.Component {
             phone={this.state.phone}
             linkedin={this.state.linkedin}
             github={this.state.github}
-            mail={this.state.mail}
+            email={this.state.email}
           />
         </main>
       </>
