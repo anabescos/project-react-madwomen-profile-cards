@@ -5,7 +5,9 @@ class Card extends React.Component {
   render() {
     console.log("Esto son las props de card", this.props);
     return (
-      <div className="generator__article--container js-card">
+      <div
+        className={`generator__article--container palette-${this.props.palette}`}
+      >
         <div className="container__nameprofession">
           <h2 className="container__nameprofession--name js-card-name">
             {this.props.name || "Peggy Olson"}
