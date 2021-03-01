@@ -3,10 +3,15 @@ import Palette from "./Palette";
 
 import "../stylesheets/layout/form/_design.scss";
 
-let isChecked = "checked";
 class Design extends React.Component {
   constructor(props) {
     super(props);
+    this.getChangeInput = this.getChangeInput.bind(this);
+  }
+
+  getChangeInput(ev) {
+    this.props.handleInput(ev.target.name, ev.target.value);
+    console.log("palette:", ev.target.name, ev.target.value);
   }
 
   render() {
@@ -16,23 +21,23 @@ class Design extends React.Component {
         <div>
           <Palette
             value="1"
-            checked={this.props.state === this.props.value}
-            onChange={this.props.getChangeInput}
+            checked={this.props.palette}
+            handleInput={this.getChangeInput}
           />
           <Palette
             value="2"
-            checked={this.props.state === this.props.value}
-            onChange={this.props.getChangeInput}
+            checked={this.props.palette}
+            handleInput={this.getChangeInput}
           />
           <Palette
             value="3"
-            checked={this.props.state === this.props.value}
-            onChange={this.props.getChangeInput}
+            checked={this.props.palette}
+            handleInput={this.getChangeInput}
           />
           <Palette
             value="4"
-            checked={this.props.state === this.props.value}
-            onChange={this.props.getChangeInput}
+            checked={this.props.palette}
+            handleInput={this.getChangeInput}
           />
         </div>
       </>

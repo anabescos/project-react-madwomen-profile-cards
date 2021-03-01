@@ -54,13 +54,11 @@ class GeneratorCard extends React.Component {
                 linkedin={this.state.linkedin}
                 github={this.state.github}
                 email={this.state.email}
-                // data={this.state}
                 handleInput={this.handleInput}
               />
             </article>
           </section>
           <Form
-            // data={this.state}
             palette={this.state.palette}
             handleInput={this.handleInput}
             name={this.state.name}

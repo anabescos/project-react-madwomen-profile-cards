@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <body class="landing">
+    <div className="landing">
       <div className="page">
         <Switch>
           <Route exact path="/" component={Landing} />
@@ -16,7 +16,7 @@ function App() {
 
         <Footer />
       </div>
-    </body>
+    </div>
   );
 }
 
