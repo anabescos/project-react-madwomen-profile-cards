@@ -1,4 +1,5 @@
 import React from "react";
+import { sendRequest } from "../services/api";
 import HeaderCard from "./HeaderCard";
 import Reset from "./Reset";
 import Card from "./Card";
@@ -34,6 +35,33 @@ class GeneratorCard extends React.Component {
       phone: "",
       linkedin: "",
       github: "",
+    });
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem("data")) {
+      this.getLocalStorage("data");
+    }
+  }
+
+  componentDidUpdate() {
+    this.setLocalStorage();
+  }
+
+  setLocalStorage() {
+    localStorage.setItem("data", JSON.stringify(this.state));
+  }
+
+  getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem("data"));
+    this.setState({
+      name: data.name,
+      job: data.job,
+      phone: data.phone,
+      mail: data.mail,
+      linkedin: data.linkedin,
+      github: data.github,
+      palette: data.palette,
     });
   }
 
