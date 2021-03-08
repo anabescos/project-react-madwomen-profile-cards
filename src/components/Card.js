@@ -18,7 +18,7 @@ class Card extends React.Component {
           </h3>
         </div>
 
-        <Profile photo={this.props.photo} />
+        <Profile photo={this.props.photo}/>
 
         <nav className="container__nav">
           <ul className="menu">

@@ -36,9 +36,9 @@ class GetPhoto extends React.Component {
   getImage () {
     console.log ('Información útil sobre el fichero cargado', this.fr);
 
-    const photo = this.fr.result;
+    const image = this.fr.result;
 
-    this.props.updatePhoto(photo);
+    this.props.updatePhoto(image);
   }
 
   render () {

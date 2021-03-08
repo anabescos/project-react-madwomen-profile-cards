@@ -69,6 +69,7 @@ class GeneratorCard extends React.Component {
       linkedin: data.linkedin,
       github: data.github,
       palette: data.palette,
+      photo: data.photo,
     });
   }
 

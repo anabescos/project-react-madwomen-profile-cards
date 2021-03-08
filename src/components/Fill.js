@@ -40,7 +40,7 @@ class Fill extends React.Component {
           name="job"
           required
         />
-        < GetPhoto photo={this.props.photo} updatePhoto={this.props.updatePhoto}/>
+        < GetPhoto photo={this.props.photo} updatePhoto={this.props.updatePhoto} />
         
         <Input
           value={this.props.email}
@@ -48,7 +48,7 @@ class Fill extends React.Component {
           setName="Email"
           onChange={this.getChangeInput}
           className="email"
-          placeholder="Ej: sally-hill@gmail.com"
+          placeholder="Ej: peggy-olson@gmail.com"
           type="email"
           id="email"
           name="email"
@@ -74,7 +74,7 @@ class Fill extends React.Component {
           setName="Linkedin"
           onChange={this.getChangeInput}
           className="linkedin"
-          placeholder="Ej: linkedin.com/in/sally.hill"
+          placeholder="Ej: peggy.olson"
           type="text"
           id="linkedin"
           name="linkedin"
@@ -85,7 +85,7 @@ class Fill extends React.Component {
           setName="Github"
           onChange={this.getChangeInput}
           className="github"
-          placeholder="Ej: @sally-hill"
+          placeholder="Ej: @peggy-olson"
           type="text"
           id="github"
           name="github"
