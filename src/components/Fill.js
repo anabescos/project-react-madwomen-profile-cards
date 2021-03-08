@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./Input";
 import "../stylesheets/layout/form/_fill.scss";
+import GetPhoto from './GetPhoto';
 
 class Fill extends React.Component {
   constructor(props) {
@@ -39,25 +40,8 @@ class Fill extends React.Component {
           name="job"
           required
         />
-        <label className="fill__box--label imgLabel" htmlFor="photo">
-          Imagen de perfil
-        </label>
-        <div className="addImage">
-          <button
-            className="js__profile-trigger fill__box--input buttonImg"
-            type="button"
-          >
-            Añadir imagen
-          </button>
-          <input
-            className="js__profile-upload-btn buttonInput"
-            type="file"
-            id="photo"
-            name="photo"
-            required
-          />
-          <div className="js__profile-preview preview" />
-        </div>
+        < GetPhoto photo={this.props.photo} updatePhoto={this.props.updatePhoto}/>
+        
         <Input
           value={this.props.email}
           htmlFor="email"

@@ -17,9 +17,15 @@ class GeneratorCard extends React.Component {
       phone: "",
       linkedin: "",
       github: "",
+      photo: "",
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.updatePhoto = this.updatePhoto.bind(this);
+  }
+
+  updatePhoto(photo){
+    this.setState({photo: photo});
   }
 
   handleInput(inputKey, inputValue) {
@@ -35,6 +41,7 @@ class GeneratorCard extends React.Component {
       phone: "",
       linkedin: "",
       github: "",
+      photo: "",
     });
   }
 
@@ -83,18 +90,21 @@ class GeneratorCard extends React.Component {
                 github={this.state.github}
                 email={this.state.email}
                 handleInput={this.handleInput}
+                updatePhoto={this.updatePhoto}
               />
             </article>
           </section>
           <Form
             palette={this.state.palette}
-            handleInput={this.handleInput}
             name={this.state.name}
             job={this.state.job}
+            photo={this.state.photo}
             phone={this.state.phone}
             linkedin={this.state.linkedin}
             github={this.state.github}
             email={this.state.email}
+            handleInput={this.handleInput}
+            updatePhoto={this.updatePhoto}
           />
         </main>
       </>
