@@ -1,0 +1,37 @@
+@import "../../core/_variables.scss";
+@import "../../core/_reset.scss";
+@import "../../core/_mixins.scss";
+
+.addImage {
+  display: flex;
+  flex-direction: row;
+
+  .buttonInput {
+    display: none;
+    width: 140px;
+    height: 30px;
+  }
+  .buttonImg {
+    cursor: pointer;
+    height: 30px;
+    width: 140px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    padding-top: 7px;
+    background-color: $color-icon;
+    font-family: $font-main;
+    font-size: 0.875rem;
+    color: $color-light;
+    text-align: center;
+    line-height: 1.43;
+    padding: 3px 0 7px 0;
+  }
+  .preview {
+    height: 30px;
+    width: 30px;
+    border: solid 1px $color-button;
+    margin-left: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+}
