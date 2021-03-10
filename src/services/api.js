@@ -1,23 +1,18 @@
-function sendRequest(data) {
-  console.log("result", data);
-  return fetch("https://awesome-profile-cards.herokuapp.com/card", {
+function api(data) {
+  const url = "https://awesome-profile-cards.herokuapp.com/card";
+  fetch(url, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
-      "content-type": "application/json",
+      "Content-Type": "application/json",
     },
   })
-    .then((resp) => resp.json())
-    .then((result) => {
-      return result;
-    })
-
-    .catch(() => {
-      return {
-        success: false,
-        error: "Se ha producido un error, por favor inténtalo más tarde",
-      };
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
     });
+    .catch((error) => console.error("Error:", error));
+
 }
 
-export { sendRequest };
+export default api;
