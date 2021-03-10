@@ -22,10 +22,11 @@ class GeneratorCard extends React.Component {
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.updatePhoto = this.updatePhoto.bind(this);
+    console.log("Se ejecuta el constructor");
   }
 
-  updatePhoto(photo){
-    this.setState({photo: photo});
+  updatePhoto(photo) {
+    this.setState({ photo: photo });
   }
 
   handleInput(inputKey, inputValue) {
@@ -46,12 +47,18 @@ class GeneratorCard extends React.Component {
   }
 
   componentDidMount() {
+    console.log(
+      "Se está ejecuntando el método componentDidMount,el componente se ha montado "
+    );
     if (localStorage.getItem("data")) {
       this.getLocalStorage("data");
     }
   }
 
   componentDidUpdate() {
+    console.log(
+      "Se está ejecuntando el método componentDidUpdate, el componente se ha actualizado "
+    );
     this.setLocalStorage();
   }
 
