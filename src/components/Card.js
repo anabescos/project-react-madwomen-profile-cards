@@ -4,6 +4,7 @@ import IconLinks from "./IconLinks";
 
 class Card extends React.Component {
   render() {
+    console.log("hola", this.props.linkedin);
     return (
       <div
         className={`generator__article--container palette-${this.props.palette}`}
@@ -22,7 +23,7 @@ class Card extends React.Component {
         <nav className="container__nav">
           <ul className="menu">
             <IconLinks
-              href={this.props.phone ? `tel:${this.props.phone}` : "#"}
+              href={this.props.phone ? `tel:${this.props.phone}` : "tel:"}
               aClassName="phone"
               iClassName="fas fa-mobile-alt"
             />
@@ -33,18 +34,20 @@ class Card extends React.Component {
             />
             <IconLinks
               href={
-                this.props.linkedin
+                this.props.linkedin.includes("https://www.linkedin.com/")
+                  ? `${this.props.linkedin}`
+                  : this.props.linkedin
                   ? `https://www.linkedin.com/in/${this.props.linkedin}`
-                  : "#"
+                  : `https://www.linkedin.com`
               }
               aClassName="linkedin"
               iClassName="fab fa-linkedin-in"
             />
             <IconLinks
               href={
-                this.props.github
-                  ? `https://www.github.com/${this.props.github}`
-                  : "#"
+                this.props.github.includes("https://github.com/")
+                  ? `${this.props.github}`
+                  : `https://github.com/${this.props.github}`
               }
               aClassName="github"
               iClassName="fab fa-github-alt"

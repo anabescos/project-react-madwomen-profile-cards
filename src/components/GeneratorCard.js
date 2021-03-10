@@ -1,5 +1,5 @@
 import React from "react";
-import { sendRequest } from "../services/api";
+// import { sendRequest } from "../services/api";
 import HeaderCard from "./HeaderCard";
 import Reset from "./Reset";
 import Card from "./Card";

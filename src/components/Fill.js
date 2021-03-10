@@ -1,7 +1,7 @@
 import React from "react";
 import Input from "./Input";
 import "../stylesheets/layout/form/_fill.scss";
-import GetPhoto from './GetPhoto';
+import GetPhoto from "./GetPhoto";
 
 class Fill extends React.Component {
   constructor(props) {
@@ -40,8 +40,11 @@ class Fill extends React.Component {
           name="job"
           required
         />
-        < GetPhoto photo={this.props.photo} updatePhoto={this.props.updatePhoto} />
-        
+        <GetPhoto
+          photo={this.props.photo}
+          updatePhoto={this.props.updatePhoto}
+        />
+
         <Input
           value={this.props.email}
           htmlFor="email"
