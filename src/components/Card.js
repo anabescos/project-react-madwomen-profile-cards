@@ -4,7 +4,6 @@ import IconLinks from "./IconLinks";
 
 class Card extends React.Component {
   render() {
-    console.log("hola", this.props.linkedin);
     return (
       <div
         className={`generator__article--container palette-${this.props.palette}`}

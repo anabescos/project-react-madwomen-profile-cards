@@ -4,6 +4,7 @@ import Fill from "./Fill";
 import Share from "./Share";
 
 function Form(props) {
+  // console.log(props.cardUrl);
   return (
     <form className="form js-submit" action="create card" method="GET">
       <Fieldset name="Diseña" icon="far fa-object-ungroup" className="design">
@@ -33,6 +34,7 @@ function Form(props) {
           email={props.email}
           handleInput={props.handleInput}
           updatePhoto={props.updatePhoto}
+          cardURL={props.cardURL}
         />
       </Fieldset>
     </form>

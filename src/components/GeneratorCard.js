@@ -4,6 +4,7 @@ import HeaderCard from "./HeaderCard";
 import Reset from "./Reset";
 import Card from "./Card";
 import Form from "./Form";
+import api from "../services/api";
 import "../stylesheets/layout/_generatorCard.scss";
 
 class GeneratorCard extends React.Component {
@@ -18,11 +19,12 @@ class GeneratorCard extends React.Component {
       linkedin: "",
       github: "",
       photo: "",
+      cardUrl: "",
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.updatePhoto = this.updatePhoto.bind(this);
-    console.log("Se ejecuta el constructor");
+    this.handleShare = this.handleShare.bind(this);
   }
 
   updatePhoto(photo) {
@@ -47,18 +49,12 @@ class GeneratorCard extends React.Component {
   }
 
   componentDidMount() {
-    console.log(
-      "Se está ejecuntando el método componentDidMount,el componente se ha montado "
-    );
     if (localStorage.getItem("data")) {
       this.getLocalStorage("data");
     }
   }
 
   componentDidUpdate() {
-    console.log(
-      "Se está ejecuntando el método componentDidUpdate, el componente se ha actualizado "
-    );
     this.setLocalStorage();
   }
 
@@ -72,11 +68,37 @@ class GeneratorCard extends React.Component {
       name: data.name,
       job: data.job,
       phone: data.phone,
-      mail: data.mail,
+      email: data.email,
       linkedin: data.linkedin,
       github: data.github,
       palette: data.palette,
       photo: data.photo,
+    });
+  }
+  handleShare() {
+    const data = {
+      name: this.state.name,
+      job: this.state.job,
+      phone: this.state.phone,
+      email: this.state.email,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+      palette: this.state.palette,
+      photo: this.state.photo,
+    };
+    console.log("holaaaa", data);
+    // console.log(this.state.cardUrl);
+    api(data).then((response) => {
+      if (response.success === true) {
+        this.setState({
+          cardUrl: "www.google.com",
+        });
+
+        console.log("state", this.cardUrl);
+      } else {
+        console.log("catakroker");
+        // apiError: response.error
+      }
     });
   }
 
@@ -113,6 +135,7 @@ class GeneratorCard extends React.Component {
             email={this.state.email}
             handleInput={this.handleInput}
             updatePhoto={this.updatePhoto}
+            cardURL={this.state.cardURL}
           />
         </main>
       </>

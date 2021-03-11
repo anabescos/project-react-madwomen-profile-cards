@@ -11,7 +11,6 @@ class Design extends React.Component {
 
   getChangeInput(ev) {
     this.props.handleInput(ev.target.name, ev.target.value);
-    console.log("palette:", ev.target.name, ev.target.value);
   }
 
   render() {

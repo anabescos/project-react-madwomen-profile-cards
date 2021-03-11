@@ -9,10 +9,12 @@ function api(data) {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       return data;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      return false;
     });
-    .catch((error) => console.error("Error:", error));
-
 }
-
 export default api;
