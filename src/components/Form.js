@@ -32,8 +32,6 @@ function Form(props) {
           linkedin={props.linkedin}
           github={props.github}
           email={props.email}
-          handleInput={props.handleInput}
-          updatePhoto={props.updatePhoto}
           handleShare={props.handleShare}
           serverData={props.serverData}
         />

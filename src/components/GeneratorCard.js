@@ -19,7 +19,10 @@ class GeneratorCard extends React.Component {
       linkedin: "",
       github: "",
       photo: "",
-      serverData: {},
+      serverData: {
+        success: "false",
+        cardURL: "",
+      },
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
@@ -46,28 +49,30 @@ class GeneratorCard extends React.Component {
       github: "",
       photo: "",
     });
-  };
+  }
 
   handleShare() {
-    console.log('Me han clickado');
     const userData = {
-          name: this.state.name,
-          job: this.state.job,
-          phone: this.state.phone,
-          email: this.state.email,
-          linkedin: this.state.linkedin,
-          github: this.state.github,
-          palette: parseInt(this.state.palette),
-          photo: this.state.photo,
-        };
-        console.log(userData);
-        api(data).then((response) => {
-          if (response.success === true) {
-            this.setState({serverData: response.cardURL});
-          }
+      name: this.state.name,
+      job: this.state.job,
+      phone: this.state.phone,
+      email: this.state.email,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+      palette: parseInt(this.state.palette),
+      photo: this.state.photo,
+    };
+    api(userData).then((response) => {
+      if (response.success === true) {
+        this.setState({
+          serverData: {
+            success: response.success,
+            cardURL: response.cardURL,
+          },
         });
-  };
-
+      }
+    });
+  }
   componentDidMount() {
     if (localStorage.getItem("data")) {
       this.getLocalStorage("data");
@@ -95,32 +100,6 @@ class GeneratorCard extends React.Component {
       photo: data.photo,
     });
   }
-  // handleShare() {
-  //   const data = {
-  //     name: this.state.name,
-  //     job: this.state.job,
-  //     phone: this.state.phone,
-  //     email: this.state.email,
-  //     linkedin: this.state.linkedin,
-  //     github: this.state.github,
-  //     palette: this.state.palette,
-  //     photo: this.state.photo,
-  //   };
-  //   console.log("holaaaa", data);
-  //   // console.log(this.state.cardUrl);
-  //   api(data).then((response) => {
-  //     if (response.success === true) {
-  //       this.setState({
-  //         cardUrl: "www.google.com",
-  //       });
-
-  //       console.log("state", this.cardUrl);
-  //     } else {
-  //       console.log("catakroker");
-  //       // apiError: response.error
-  //     }
-  //   });
-  // }
 
   render() {
     return (
@@ -155,7 +134,7 @@ class GeneratorCard extends React.Component {
             email={this.state.email}
             handleInput={this.handleInput}
             updatePhoto={this.updatePhoto}
-            cardURL={this.state.cardURL}
+            serverData={this.state.serverData}
             handleShare={this.handleShare}
           />
         </main>
