@@ -1,25 +1,20 @@
 import React from "react";
 import "../stylesheets/layout/form/_share.scss";
 
-class Share extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleButton = this.handleButton.bind(this);
-  }
+function Share(props) {
+  const handleShare = () => {
+    props.handleShare();
+  };
 
-  handleButton(ev) {
-    ev.preventDefault();
-    this.props.handleShare();
-  }
-
-  render() {
-    return (
+  console.log(props);
+  
+  return (
       <div className="share__box collapsable__content collapsable__open">
         <button
           className="share__box--button js-create-btn"
           type="submit"
           title="Create card"
-          onClick={this.props.handleButton}
+          onClick={handleShare}
         >
           <i className="iconCard far fa-address-card"></i>
           Crear tarjeta
@@ -29,21 +24,20 @@ class Share extends React.Component {
           <h3 className="titleCard">La tarjeta ha sido creada:</h3>
           <a
             className="linkCard js-card-result"
-            href={`${this.props.cardUrl}`}
+            href={`${props.serverData}`}
             target="_blank"
             rel="noreferrer"
           >
             {" "}
-            lalalal
-            {this.props.cardUrl}
+            Qué talento!!
+            {props.serverData}
           </a>
-          <a className="twitterLink" href="" target="_blank" rel="noreferrer">
+          <a className="twitterLink" href="www.twitter.com" target="_blank" rel="noreferrer">
             <i className="icon fab fa-twitter"></i>Compartir en twitter
           </a>
         </div>
       </div>
     );
-  }
 }
 
 export default Share;

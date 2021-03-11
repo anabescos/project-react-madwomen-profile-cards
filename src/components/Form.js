@@ -34,7 +34,8 @@ function Form(props) {
           email={props.email}
           handleInput={props.handleInput}
           updatePhoto={props.updatePhoto}
-          cardURL={props.cardURL}
+          handleShare={props.handleShare}
+          serverData={props.serverData}
         />
       </Fieldset>
     </form>

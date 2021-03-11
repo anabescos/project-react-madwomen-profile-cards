@@ -4,7 +4,7 @@ import HeaderCard from "./HeaderCard";
 import Reset from "./Reset";
 import Card from "./Card";
 import Form from "./Form";
-import api from "../services/api";
+import api from "../services/Api";
 import "../stylesheets/layout/_generatorCard.scss";
 
 class GeneratorCard extends React.Component {
@@ -19,7 +19,7 @@ class GeneratorCard extends React.Component {
       linkedin: "",
       github: "",
       photo: "",
-      cardUrl: "",
+      serverData: {},
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
@@ -46,7 +46,27 @@ class GeneratorCard extends React.Component {
       github: "",
       photo: "",
     });
-  }
+  };
+
+  handleShare() {
+    console.log('Me han clickado');
+    const userData = {
+          name: this.state.name,
+          job: this.state.job,
+          phone: this.state.phone,
+          email: this.state.email,
+          linkedin: this.state.linkedin,
+          github: this.state.github,
+          palette: parseInt(this.state.palette),
+          photo: this.state.photo,
+        };
+        console.log(userData);
+        api(data).then((response) => {
+          if (response.success === true) {
+            this.setState({serverData: response.cardURL});
+          }
+        });
+  };
 
   componentDidMount() {
     if (localStorage.getItem("data")) {
@@ -75,32 +95,32 @@ class GeneratorCard extends React.Component {
       photo: data.photo,
     });
   }
-  handleShare() {
-    const data = {
-      name: this.state.name,
-      job: this.state.job,
-      phone: this.state.phone,
-      email: this.state.email,
-      linkedin: this.state.linkedin,
-      github: this.state.github,
-      palette: this.state.palette,
-      photo: this.state.photo,
-    };
-    console.log("holaaaa", data);
-    // console.log(this.state.cardUrl);
-    api(data).then((response) => {
-      if (response.success === true) {
-        this.setState({
-          cardUrl: "www.google.com",
-        });
+  // handleShare() {
+  //   const data = {
+  //     name: this.state.name,
+  //     job: this.state.job,
+  //     phone: this.state.phone,
+  //     email: this.state.email,
+  //     linkedin: this.state.linkedin,
+  //     github: this.state.github,
+  //     palette: this.state.palette,
+  //     photo: this.state.photo,
+  //   };
+  //   console.log("holaaaa", data);
+  //   // console.log(this.state.cardUrl);
+  //   api(data).then((response) => {
+  //     if (response.success === true) {
+  //       this.setState({
+  //         cardUrl: "www.google.com",
+  //       });
 
-        console.log("state", this.cardUrl);
-      } else {
-        console.log("catakroker");
-        // apiError: response.error
-      }
-    });
-  }
+  //       console.log("state", this.cardUrl);
+  //     } else {
+  //       console.log("catakroker");
+  //       // apiError: response.error
+  //     }
+  //   });
+  // }
 
   render() {
     return (
@@ -136,6 +156,7 @@ class GeneratorCard extends React.Component {
             handleInput={this.handleInput}
             updatePhoto={this.updatePhoto}
             cardURL={this.state.cardURL}
+            handleShare={this.handleShare}
           />
         </main>
       </>
