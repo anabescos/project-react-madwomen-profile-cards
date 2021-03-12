@@ -4,7 +4,7 @@ import HeaderCard from "./HeaderCard";
 import Reset from "./Reset";
 import Card from "./Card";
 import Form from "./Form";
-import api from "../services/Api";
+import Api from "../services/Api";
 import "../stylesheets/layout/_generatorCard.scss";
 
 class GeneratorCard extends React.Component {
@@ -62,7 +62,7 @@ class GeneratorCard extends React.Component {
       palette: parseInt(this.state.palette),
       photo: this.state.photo,
     };
-    api(userData).then((response) => {
+    Api(userData).then((response) => {
       if (response.success === true) {
         this.setState({
           serverData: {
