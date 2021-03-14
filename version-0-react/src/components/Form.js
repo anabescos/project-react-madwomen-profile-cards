@@ -34,6 +34,7 @@ function Form(props) {
           email={props.email}
           handleShare={props.handleShare}
           serverData={props.serverData}
+          hiddenClass={props.hiddenClass}
         />
       </Fieldset>
     </form>

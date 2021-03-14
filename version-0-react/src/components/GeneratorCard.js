@@ -23,6 +23,7 @@ class GeneratorCard extends React.Component {
         success: "false",
         cardURL: "",
       },
+      hiddenClass: "hidden",
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
@@ -48,10 +49,12 @@ class GeneratorCard extends React.Component {
       linkedin: "",
       github: "",
       photo: "",
+      hiddenClass: "hidden",
     });
   }
 
   handleShare() {
+    this.setState({ hiddenClass: "" });
     const userData = {
       name: this.state.name,
       job: this.state.job,
@@ -136,6 +139,7 @@ class GeneratorCard extends React.Component {
             updatePhoto={this.updatePhoto}
             serverData={this.state.serverData}
             handleShare={this.handleShare}
+            hiddenClass={this.state.hiddenClass}
           />
         </main>
       </>
