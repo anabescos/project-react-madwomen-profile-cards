@@ -18,24 +18,29 @@ server.get("/card/:id:/", (req, res) => {
   res.json(response);
 });
 
- server.post('/card/', (req, res) => {
-//     // Cojo los datos que recibo desde el navegador que están en req.body.email y req.body.password
-//     // Con estos datos busco en el array de usuarios si el usuario existe
-//     const userFound = usersData.find(user => {
-//       return user.email === req.body.email && user.password === req.body.password;
-//     });
+server.post("/card/", (req, res) => {
+  console.log(`Creating the user in database with user name:`);
+  const response = {
+    result: `User created: `,
+  };
+  res.json(response);
 
-//     if (userFound !== undefined) {
-//       // Si el usuario existe devuelvo el id del usuario
-//       res.json({
-//         error: false,
-//         userId: userFound.id
-//       });
-//     } else {
-//       // Si el usuario no existe devuelvo un error
-//       res.status(404).json({
-//         error: 'user-not-found',
-//         message: 'User not found'
-//       });
-//     }
-//   });
+  //     // Cojo los datos que recibo desde el navegador que están en req.body.email y req.body.password
+  //     // Con estos datos busco en el array de usuarios si el usuario existe
+  //     const userFound = usersData.find(user => {
+  //       return user.email === req.body.email && user.password === req.body.password;
+  //     });
+  //     if (userFound !== undefined) {
+  //       // Si el usuario existe devuelvo el id del usuario
+  //       res.json({
+  //         error: false,
+  //         userId: userFound.id
+  //       });
+  //     } else {
+  //       // Si el usuario no existe devuelvo un error
+  //       res.status(404).json({
+  //         error: 'user-not-found',
+  //         message: 'User not found'
+  //       });
+  //     }
+});
