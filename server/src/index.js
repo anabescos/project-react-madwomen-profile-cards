@@ -1,6 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 
+const usersData = [
+  {
+    palette: 1,
+    name: "Ana B",
+    job: "front-end developer",
+    email: "a@gmail.com",
+    phone: "666555444",
+    linkedin: "anab",
+    github: "anab",
+    photo: "image",
+  },
+];
+
 const server = express();
 
 server.use(cors());
@@ -11,36 +24,21 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-server.get("/card/:id:/", (req, res) => {
-  const response = {
-    users: [{ name: "Sofía" }, { name: "María" }],
-  };
-  res.json(response);
-});
+const generatedCards = [];
+
+// server.get("/card/:id:/", (req, res) => {
+//   const response = {
+//     users: [{ name: "Paula" }, { name: "Jech" }],
+//   };
+//   res.json(response);
+// });
 
 server.post("/card/", (req, res) => {
-  console.log(`Creating the user in database with user name:`);
-  const response = {
-    result: `User created: `,
-  };
-  res.json(response);
+  const newCards = generatedCards.push(usersData);
 
-  //     // Cojo los datos que recibo desde el navegador que están en req.body.email y req.body.password
-  //     // Con estos datos busco en el array de usuarios si el usuario existe
-  //     const userFound = usersData.find(user => {
-  //       return user.email === req.body.email && user.password === req.body.password;
-  //     });
-  //     if (userFound !== undefined) {
-  //       // Si el usuario existe devuelvo el id del usuario
-  //       res.json({
-  //         error: false,
-  //         userId: userFound.id
-  //       });
-  //     } else {
-  //       // Si el usuario no existe devuelvo un error
-  //       res.status(404).json({
-  //         error: 'user-not-found',
-  //         message: 'User not found'
-  //       });
-  //     }
+  console.log(
+    `Creating the user in database with user name: ${generatedCards}`
+  );
+
+  res.json(newCards);
 });
