@@ -1,0 +1,78 @@
+const express = require("express");
+const cors = require("cors");
+
+const usersData = [
+  {
+    palette: 1,
+    name: "Ana B",
+    job: "front-end developer",
+    email: "a@gmail.com",
+    phone: "666555444",
+    linkedin: "anab",
+    github: "anab",
+    photo: "image",
+  },
+];
+
+const server = express();
+
+server.use(cors());
+server.use(express.json());
+
+const serverPort = 3000;
+server.listen(serverPort, () => {
+  console.log(`Server listening at http://localhost:${serverPort}`);
+});
+
+const generatedCards = [];
+server.post("/card/", (req, res) => {
+  if (!req.body.name || req.body.name === "") {
+    res.status(404)({
+      succes: false,
+      error: "Mandatory fields: name",
+    });
+  } else if (!req.body.job || req.body.job.length < 2) {
+    res.status(404)({
+      succes: false,
+      error: "Mandatory fields: job",
+    });
+  } else if (!req.body.email || req.body.email.length < 2) {
+    res.status(404)({
+      succes: false,
+      error: "Mandatory fields: email",
+    });
+  } else if (!req.body.phone || req.body.phone.length < 2) {
+    res.status(404)({
+      succes: false,
+      error: "Mandatory fields: phone",
+    });
+  } else if (!req.body.linkedin || req.body.linkedin.length < 2) {
+    res.status(404)({
+      succes: false,
+      error: "Mandatory fields: linkedin",
+    });
+  } else if (!req.body.github || req.body.github.length < 2) {
+    res.status(404)({
+      succes: false,
+      error: "Mandatory fields: github",
+    });
+  } else if (!(req.body.palette >= 1 && req.body.palette < 5)) {
+    res.status(404)({
+      succes: false,
+      error: "Mandatory fields: palette",
+    });
+  } else {
+    // Insertar en la base de datos
+    generatedCards.push({ card: req.body });
+    // Responder que ha ido bien
+    res.status(200).json({ result: "ok" });
+  }
+  res.json([usersData]);
+});
+
+server.get("/card/", (req, res) => {
+  const response = {
+    users: [{ name: "Paula" }, { name: "Jech" }],
+  };
+  res.json(response);
+});
