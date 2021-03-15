@@ -24,6 +24,9 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
+const staticServerPath = "./public"; // relative to the root of the project
+server.use(express.static(staticServerPath));
+
 const generatedCards = [];
 server.post("/card/", (req, res) => {
   if (!req.body.name || req.body.name === "") {
