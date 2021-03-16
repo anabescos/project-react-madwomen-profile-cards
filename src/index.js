@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-// const Database = require("better-sqlite3");
+const Database = require("better-sqlite3");
 
 const usersData = [
   {
@@ -18,11 +18,12 @@ const usersData = [
 const server = express();
 
 server.use(cors());
-server.use(express.json());
+server.use(express.json({ limit: "10mb" }));
+//server.use(express.json());
 
 server.set("view engine", "ejs");
 
-const serverPort = process.env.PORT || 3000;
+const serverPort = process.env.PORT || 3010;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -83,20 +84,16 @@ server.post("/card/", (req, res) => {
 });
 
 server.get("/card/:id", (req, res) => {
-  // const data = {
-  //   "palette": 1,
-  //   "name": "Ana B",
-  //   "job": "front-end developer",
-  //   "email": "a@gmail.com",
-  //   "phone": "666555444",
-  //   "linkedin": "anab",
-  //   "github": "anab",
-  //   "photo": "image",
-  // };
-
-  // res.render("pages/card", data);
-  const response = {
-    users: [{ name: "Paula" }, { name: "Jech" }],
+  const data = {
+    palette: 1,
+    name: "Ana B",
+    job: "front-end developer",
+    email: "a@gmail.com",
+    phone: "666555444",
+    linkedin: "anab",
+    github: "anab",
+    photo: "image",
   };
-  res.json(response);
+
+  res.render("pages/card", data);
 });

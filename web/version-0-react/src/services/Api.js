@@ -1,5 +1,5 @@
 function api(data) {
-  const url = "https://awesome-profile-cards.herokuapp.com/card";
+  const url = "https://awesome-profile-cards-madwomen.herokuapp.com/card";
   return fetch(url, {
     method: "POST",
     body: JSON.stringify(data),
@@ -10,10 +10,12 @@ function api(data) {
     .then((response) => response.json())
     .then((data) => {
       return data;
+    })
+    .catch(() => {
+      return {
+        success: false,
+        error: "Se ha producido un error. Inténtelo más tarde",
+      };
     });
-  // .catch (error => {
-  //   console.error ('Error:', error);
-  //   return false;
-  // });
 }
 export default api;

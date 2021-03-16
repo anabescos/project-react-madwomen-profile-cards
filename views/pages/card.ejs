@@ -1,1 +1,101 @@
 <!-- meter html del preview card -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/main.d8e3b58c.chunk.css" />
+    <script
+      src="https://kit.fontawesome.com/d6db27f241.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>React Mad-Women</title>
+  </head>
+  <body>
+    <section class="generator">
+      <article class="generator__article">
+        <button class="generator__article--button1 js-reset">
+          <i class="far fa-trash-alt" aria-hidden="true"></i><span>Reset</span>
+        </button>
+        <div class="generator__article--container palette-1">
+          <div class="container__nameprofession">
+            <h2 class="container__nameprofession--name js-card-name">
+              Peggy Olson
+            </h2>
+            <h3 class="container__nameprofession--profession js-card-job">
+              Copywriter
+            </h3>
+          </div>
+          <div
+            class="js__profile-image container__img"
+            style="background-image: url(<%= photo %>)"
+          ></div>
+          <nav class="container__nav">
+            <ul class="menu">
+              <li class="menu__item">
+                <a
+                  class="js-card-phone"
+                  href="tel:"
+                  target="_blank"
+                  rel="noreferrer"
+                  ><i
+                    class="menu__item--icon fas fa-mobile-alt"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a
+                  class="js-card-email"
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  ><i
+                    class="menu__item--icon far fa-envelope"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a
+                  class="js-card-linkedin"
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  ><i
+                    class="menu__item--icon fab fa-linkedin-in"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a
+                  class="js-card-github"
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  ><i
+                    class="menu__item--icon fab fa-github-alt"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
