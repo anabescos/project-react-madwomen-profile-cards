@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+// const Database = require("better-sqlite3");
 
 const usersData = [
   {
@@ -19,10 +20,18 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
+server.set("view engine", "ejs");
+
 const serverPort = process.env.PORT || 3000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
+
+// init and config data base
+// const db = new Database("./src/data/cards.db", {
+//   // this line log in console all data base queries
+//   verbose: console.log,
+// });
 
 const staticServerPath = "./public"; // relative to the root of the project
 server.use(express.static(staticServerPath));
@@ -73,7 +82,19 @@ server.post("/card/", (req, res) => {
   res.json([usersData]);
 });
 
-server.get("/card/", (req, res) => {
+server.get("/card/:id", (req, res) => {
+  // const data = {
+  //   "palette": 1,
+  //   "name": "Ana B",
+  //   "job": "front-end developer",
+  //   "email": "a@gmail.com",
+  //   "phone": "666555444",
+  //   "linkedin": "anab",
+  //   "github": "anab",
+  //   "photo": "image",
+  // };
+
+  // res.render("pages/card", data);
   const response = {
     users: [{ name: "Paula" }, { name: "Jech" }],
   };
