@@ -1,4 +1,4 @@
-![alt text](.public/media/MadWomenLogo_1v2.svg)
+![alt text](./web/version-0-react/src/images/MadWomenLogo_1v2.svg)
 
 # MAD WOMEN PROFILE CARDS
 
