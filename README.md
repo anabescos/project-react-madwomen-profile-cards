@@ -11,8 +11,6 @@ Working with React allowed us to structure our code in components. To make the a
 
 We were also asked to create our own server, using Node JS, Express JS, SQLite and Heroku.
 
-Here you can visit the [fetch](https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/) we used for this project.
-
 Using this [link](https://github.com/Adalab/project-promo-l-module-3-team-4.git) you can check out our code, explore it and play a little bit with it if you want. For that, you can clone/download the repository.
 
 If you have any questions, please contact us, we'll be happy to help!
