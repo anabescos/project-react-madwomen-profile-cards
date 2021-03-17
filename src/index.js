@@ -13,7 +13,7 @@ server.set("view engine", "ejs");
 const staticServerPath = "./public"; // relative to the root of the project
 server.use(express.static(staticServerPath));
 
-const serverPort = process.env.PORT || 3000;
+const serverPort = process.env.PORT || 3001;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -24,7 +24,7 @@ const db = new Database("./src/data/cards.db", {
 });
 
 server.get("/card/:id", (req, res) => {
-  const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
+  const query = db.prepare("SELECT * FROM cards WHERE id = ?");
   const data = query.get(req.params.id);
 
   console.log(data);
@@ -32,7 +32,7 @@ server.get("/card/:id", (req, res) => {
   res.render("pages/card", data);
 });
 
-const generatedCards = [];
+// const generatedCards = [];
 
 server.post("/card/", (req, res) => {
   console.log(req.body);
@@ -62,11 +62,29 @@ server.post("/card/", (req, res) => {
     response.error = "Mandatory fields: palette";
   } else {
     // Insertar en la base de datos
-    generatedCards.push({ card: req.body });
+    // generatedCards.push({ card: req.body });
+    const statement = db.prepare(
+      "INSERT INTO cards(name, job, photo, phone, email, linkedin, github, palette) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+    );
+    const result = statement.run(
+      req.body.name,
+      req.body.job,
+      req.body.photo,
+      req.body.phone,
+      req.body.email,
+      req.body.linkedin,
+      req.body.github,
+      req.body.palette
+    );
+    result.lastInsertRowid;
     // Responder que ha ido bien
     response.success = true;
-    response.cardURL =
-      "https://awesome-profile-cards-madwomen.herokuapp.com/card";
+    if (req.host === "localhost") {
+      response.cardURL =
+        "https://localhost:3001/card/" + result.lastInsertRowid;
+    } else {
+      response.cardURL = `https://awesome-profile-cards-madwomen.herokuapp.com/card/${result.lastInsertRowid}`;
+    }
   }
   res.json(response);
 });
