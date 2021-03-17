@@ -26,28 +26,25 @@
   <body>
     <section class="generator">
       <article class="generator__article">
-        <button class="generator__article--button1 js-reset">
-          <i class="far fa-trash-alt" aria-hidden="true"></i><span>Reset</span>
-        </button>
-        <div class="generator__article--container palette-1">
+        <div class="generator__article--container palette-<%= palette %>">
           <div class="container__nameprofession">
             <h2 class="container__nameprofession--name js-card-name">
-              Peggy Olson
+              <%= name %>
             </h2>
             <h3 class="container__nameprofession--profession js-card-job">
-              Copywriter
+              <%= job %>
             </h3>
           </div>
           <div
             class="js__profile-image container__img"
-            style="background-image: url(<%= photo %>)"
+            style="background-image: url('<%= photo %>')"
           ></div>
           <nav class="container__nav">
             <ul class="menu">
               <li class="menu__item">
                 <a
                   class="js-card-phone"
-                  href="tel:"
+                  href="tel:<%= phone %>"
                   target="_blank"
                   rel="noreferrer"
                   ><i
@@ -59,7 +56,7 @@
               <li class="menu__item">
                 <a
                   class="js-card-email"
-                  href="#"
+                  href="<%= email %>"
                   target="_blank"
                   rel="noreferrer"
                   ><i
@@ -71,7 +68,7 @@
               <li class="menu__item">
                 <a
                   class="js-card-linkedin"
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com<%= linkedin %>"
                   target="_blank"
                   rel="noreferrer"
                   ><i
@@ -83,7 +80,7 @@
               <li class="menu__item">
                 <a
                   class="js-card-github"
-                  href="https://github.com/"
+                  href="https://github.com/<%= github %>"
                   target="_blank"
                   rel="noreferrer"
                   ><i
