@@ -4,7 +4,8 @@ const apiUrl = isDevEnviroment
   : "https://awesome-profile-cards-madwomen.herokuapp.com/card";
 
 function api(data) {
-  return fetch(`${apiUrl}`, {
+  console.log(apiUrl);
+  return fetch("http://localhost:3000/card", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {

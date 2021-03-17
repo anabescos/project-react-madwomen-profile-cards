@@ -39,7 +39,7 @@ function Share(props) {
     <div className="share__box collapsable__content collapsable__open">
       <button
         className="share__box--button js-create-btn"
-        type="submit"
+        type="button"
         title="Create card"
         onClick={handleShare}
       >

@@ -30,11 +30,11 @@ server.get("/card/:id", (req, res) => {
 
   console.log(data);
 
-  res.render("./pages/card", data);
+  res.render("/pages/card", data);
 });
 
 server.post("/card/", (req, res) => {
-  console.log(req);
+  // console.log(req);
   // const statement = db.prepare(
   //   "INSERT INTO cards(name, job, photo, phone, email, linkedin, github, palette) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
   // );
