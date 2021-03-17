@@ -13,7 +13,7 @@ server.set("view engine", "ejs");
 const staticServerPath = "./public"; // relative to the root of the project
 server.use(express.static(staticServerPath));
 
-const serverPort = process.env.PORT || 3001;
+const serverPort = process.env.PORT || 3000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -24,19 +24,30 @@ const db = new Database("./src/data/cards.db", {
 });
 
 server.get("/card/:id", (req, res) => {
+  console.log(req.params.id);
   const query = db.prepare("SELECT * FROM cards WHERE id = ?");
   const data = query.get(req.params.id);
 
   console.log(data);
 
-  res.render("pages/card", data);
+  res.render("./pages/card", data);
 });
 
-// const generatedCards = [];
-
 server.post("/card/", (req, res) => {
-  console.log(req.body);
-
+  console.log(req);
+  // const statement = db.prepare(
+  //   "INSERT INTO cards(name, job, photo, phone, email, linkedin, github, palette) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+  // );
+  // const result = statement.run(
+  //   req.body.name,
+  //   req.body.job,
+  //   req.body.photo,
+  //   req.body.phone,
+  //   req.body.email,
+  //   req.body.linkedin,
+  //   req.body.github,
+  //   req.body.palette
+  // );
   const response = {};
 
   if (!req.body.name || req.body.name === "") {
@@ -62,7 +73,6 @@ server.post("/card/", (req, res) => {
     response.error = "Mandatory fields: palette";
   } else {
     // Insertar en la base de datos
-    // generatedCards.push({ card: req.body });
     const statement = db.prepare(
       "INSERT INTO cards(name, job, photo, phone, email, linkedin, github, palette) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
     );
@@ -81,7 +91,7 @@ server.post("/card/", (req, res) => {
     response.success = true;
     if (req.host === "localhost") {
       response.cardURL =
-        "https://localhost:3001/card/" + result.lastInsertRowid;
+        "https://localhost:3000/card/" + result.lastInsertRowid;
     } else {
       response.cardURL = `https://awesome-profile-cards-madwomen.herokuapp.com/card/${result.lastInsertRowid}`;
     }
