@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
-  "author": "React Mad Woman",
+  "author": "React Mad Women",
   "license": "ISC",
   "dependencies": {
     "better-sqlite3": "^7.1.2",

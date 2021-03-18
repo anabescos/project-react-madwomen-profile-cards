@@ -34,20 +34,6 @@ server.get("/card/:id", (req, res) => {
 });
 
 server.post("/card/", (req, res) => {
-  // console.log(req);
-  // const statement = db.prepare(
-  //   "INSERT INTO cards(name, job, photo, phone, email, linkedin, github, palette) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
-  // );
-  // const result = statement.run(
-  //   req.body.name,
-  //   req.body.job,
-  //   req.body.photo,
-  //   req.body.phone,
-  //   req.body.email,
-  //   req.body.linkedin,
-  //   req.body.github,
-  //   req.body.palette
-  // );
   const response = {};
 
   if (!req.body.name || req.body.name === "") {
