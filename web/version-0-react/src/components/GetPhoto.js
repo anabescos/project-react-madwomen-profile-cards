@@ -1,6 +1,6 @@
 import React from "react";
 // import PropTypes from 'prop-types';
-import defaultPhoto from "../images/peggy-olson.jpg";
+import defaultPhoto from "../images/joan-holloway.jpg";
 import "../stylesheets/layout/form/GetPhoto.scss";
 
 class GetPhoto extends React.Component {

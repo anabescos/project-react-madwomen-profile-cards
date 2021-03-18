@@ -22,7 +22,7 @@ class Fill extends React.Component {
           setName="Nombre Completo"
           onChange={this.getChangeInput}
           className="name"
-          placeholder="Ej: Peggy Olson"
+          placeholder="Ej: Joan Holloway"
           type="text"
           id="name"
           name="name"
@@ -34,7 +34,7 @@ class Fill extends React.Component {
           setName="Puesto"
           onChange={this.getChangeInput}
           className="job"
-          placeholder="Ej: Copywriter"
+          placeholder="Ej: Office manager"
           type="text"
           id="job"
           name="job"
@@ -51,7 +51,7 @@ class Fill extends React.Component {
           setName="Email"
           onChange={this.getChangeInput}
           className="email"
-          placeholder="Ej: peggy-olson@gmail.com"
+          placeholder="Ej: joan-holloway@gmail.com"
           type="email"
           id="email"
           name="email"
@@ -77,7 +77,7 @@ class Fill extends React.Component {
           setName="Linkedin"
           onChange={this.getChangeInput}
           className="linkedin"
-          placeholder="Ej: peggy.olson"
+          placeholder="Ej: joan.holloway"
           type="text"
           id="linkedin"
           name="linkedin"
@@ -88,7 +88,7 @@ class Fill extends React.Component {
           setName="Github"
           onChange={this.getChangeInput}
           className="github"
-          placeholder="Ej: @peggy-olson"
+          placeholder="Ej: @joan-holloway"
           type="text"
           id="github"
           name="github"

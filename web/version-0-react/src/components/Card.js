@@ -10,10 +10,10 @@ class Card extends React.Component {
       >
         <div className="container__nameprofession">
           <h2 className="container__nameprofession--name js-card-name">
-            {this.props.name || "Peggy Olson"}
+            {this.props.name || "Joan Holloway"}
           </h2>
           <h3 className="container__nameprofession--profession js-card-job">
-            {this.props.job || "Copywriter"}
+            {this.props.job || "Office manager"}
           </h3>
         </div>
 
