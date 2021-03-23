@@ -30,7 +30,7 @@ server.get("/card/:id", (req, res) => {
 
   console.log(data);
 
-  res.render("/pages/card", data);
+  res.render("pages/card", data);
 });
 
 server.post("/card/", (req, res) => {

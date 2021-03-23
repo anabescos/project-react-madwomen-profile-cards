@@ -5,7 +5,7 @@ const apiUrl = isDevEnviroment
 
 function api(data) {
   // return fetch("https://awesome-profile-cards-madwomen.herokuapp.com/card", {
-  return fetch(`${apiUrl}`, {
+  return fetch(apiUrl, {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
