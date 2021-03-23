@@ -846,3 +846,99 @@ code {
   border: 2px solid #a2deaf;
   border-radius: 16px;
 }
+.generatorHeroku__articleHeroku--container .container__nav .menu__item--icon {
+  font-size: 1.125rem;
+  color: #114e4e;
+}
+.generatorHeroku__articleHeroku--container
+  .container__nav.palette-1
+  .menu__item {
+  border: #a2deaf;
+}
+.generatorHeroku__articleHeroku--container
+  .container__nav.palette-2
+  .menu__item {
+  border: #e95626;
+}
+.generatorHeroku__articleHeroku--container
+  .container__nav.palette-3
+  .menu__item {
+  border: #a0c0cf;
+}
+.generatorHeroku__articleHeroku--container
+  .container__nav.palette-4
+  .menu__item {
+  border: #95999b;
+}
+.generatorHeroku__articleHeroku--container.palette-1
+  .container__nameprofession {
+  border-left-color: #438792;
+}
+.generatorHeroku__articleHeroku--container.palette-2
+  .container__nameprofession {
+  border-left-color: #bd1010;
+}
+.generatorHeroku__articleHeroku--container.palette-3
+  .container__nameprofession {
+  border-left-color: #eab052;
+}
+.generatorHeroku__articleHeroku--container.palette-4
+  .container__nameprofession {
+  border-left-color: #cc1517;
+}
+.generatorHeroku__articleHeroku--container.palette-1
+  .container__nameprofession--name {
+  color: #114e4e;
+}
+.generatorHeroku__articleHeroku--container.palette-2
+  .container__nameprofession--name {
+  color: #420101;
+}
+.generatorHeroku__articleHeroku--container.palette-3
+  .container__nameprofession--name {
+  color: #3e5b65;
+}
+.generatorHeroku__articleHeroku--container.palette-4
+  .container__nameprofession--name {
+  color: #000;
+}
+.generatorHeroku__articleHeroku--container.palette-1
+  .container__nav
+  .menu__item {
+  border-color: #a2deaf;
+}
+.generatorHeroku__articleHeroku--container.palette-2
+  .container__nav
+  .menu__item {
+  border-color: #e95626;
+}
+.generatorHeroku__articleHeroku--container.palette-3
+  .container__nav
+  .menu__item {
+  border-color: #a0c0cf;
+}
+.generatorHeroku__articleHeroku--container.palette-4
+  .container__nav
+  .menu__item {
+  border-color: #95999b;
+}
+.generatorHeroku__articleHeroku--container.palette-1
+  .container__nav
+  .menu__item--icon {
+  color: #114e4e;
+}
+.generatorHeroku__articleHeroku--container.palette-2
+  .container__nav
+  .menu__item--icon {
+  color: #420101;
+}
+.generatorHeroku__articleHeroku--container.palette-3
+  .container__nav
+  .menu__item--icon {
+  color: #3e5b65;
+}
+.generatorHeroku__articleHeroku--container.palette-4
+  .container__nav
+  .menu__item--icon {
+  color: #000;
+}
