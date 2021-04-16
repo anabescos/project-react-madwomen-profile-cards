@@ -1,6 +1,6 @@
 ![alt text](./web/version-0-react/src/images/MadWomenLogo_1v2.svg)
 
-# REACT MAD WOMEN PROFILE CARDS
+# REACT MAD WOMEN PROFILE CARDS.
 
 This project allows you to create your personal profile cards which include your contact data(phone number and email address) and links to your Linkedin and GitHub accounts. To do that you'll need to fill in all the required inputs. If you miss some, don't worry, you'll receive a notification saying which one you have missed.
 
